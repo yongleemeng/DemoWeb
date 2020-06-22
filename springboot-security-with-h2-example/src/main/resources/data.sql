@@ -9,6 +9,10 @@ INSERT INTO AUTHORITIES VALUES('celal','ROLE_USER');
 INSERT INTO AUTHORITIES VALUES('celal','ROLE_EDITOR');
 INSERT INTO AUTHORITIES VALUES('celal','ROLE_ADMIN');
 
+
+INSERT INTO CUSTOMER (ID,NAME,PHONE_NO,STATUS) VALUES('222','Tester1','0127483674',1);
+INSERT INTO CUSTOMER (ID,NAME,PHONE_NO,STATUS) VALUES('333','Tester2','0127986986',1);
+/*
 INSERT INTO p_personel (id,first_name,last_name) VALUES (1, 'Ziya', 'Ferit');
 INSERT INTO p_personel (id,first_name,last_name) VALUES (2, 'Beşir', 'Dal');
 INSERT INTO p_personel (id,first_name,last_name) VALUES (3, 'Eda', 'Rize');
@@ -33,3 +37,4 @@ INSERT INTO p_pet (id,first_name,birth_date,personel_id) VALUES (10, 'Karaburun'
 INSERT INTO p_pet (id,first_name,birth_date,personel_id) VALUES (11, 'Twetty', '2000-03-09', 7);
 INSERT INTO p_pet (id,first_name,birth_date,personel_id) VALUES (12, 'Tarçın', '2000-06-24', 8);
 INSERT INTO p_pet (id,first_name,birth_date,personel_id) VALUES (13, 'Sarı', '2002-06-08', 9);
+*/

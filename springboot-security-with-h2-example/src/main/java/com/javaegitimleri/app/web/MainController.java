@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.javaegitimleri.app.service.AppService;
+import com.javaegitimleri.app.model.Transaction;
+import com.javaegitimleri.app.service.TransactionService;
 
 @Controller
 public class MainController {
 
 	@Autowired
-	private AppService appservice;
+	private TransactionService appservice;
 	
 	@RequestMapping("/login.html")
 	public ModelAndView getLoginPage() {
@@ -24,15 +25,6 @@ public class MainController {
 		return mav;
 	}
 	
-	@RequestMapping("/personels")
-	public ModelAndView getPersonel() {
-		ModelAndView mav=new ModelAndView();
-		
-		
-		mav.addObject("personels", appservice.findPersonels());
-		mav.setViewName("personels");
-		return mav;
-	}
 	
 	@RequestMapping("/")
 	public String mainPage() {

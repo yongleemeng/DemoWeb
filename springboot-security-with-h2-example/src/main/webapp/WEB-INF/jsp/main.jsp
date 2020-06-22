@@ -33,7 +33,10 @@
 				<div id="demo"></div>
 			</div>
 			<div class="col-sm-6">
+			/rest/transaction/07497809-a42d-4cf2-9c8b-49b53bae819a
+			/rest/transactions/name=&amp;description=&amp;accountNumber=&amp;pageNo=1
 				<hr>
+				
 				<form action="logout" method="post">
 					<input type="hidden" name="${_csrf.parameterName }"
 						value="${_csrf.token }" /> 

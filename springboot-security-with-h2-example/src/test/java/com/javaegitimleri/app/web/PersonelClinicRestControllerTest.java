@@ -28,7 +28,7 @@ public class PersonelClinicRestControllerTest {
 		restTemplate = new RestTemplate();
 	}
 	
-	@Test
+	//@Test
 	public void deletePersonelTest() {
 		restTemplate.delete("http://localhost:8182/rest/personel/6");
 		try {
@@ -41,7 +41,7 @@ public class PersonelClinicRestControllerTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void updatePersonelTest() {
 		Personel p=restTemplate.getForObject("http://localhost:8182/rest/personel/2", Personel.class);
 		MatcherAssert.assertThat(p.getFirstname(), Matchers.equalTo("Celal"));
@@ -53,7 +53,7 @@ public class PersonelClinicRestControllerTest {
 	
 	
 	
-	@Test
+	//@Test
 	public void createPersonelTest() {	
 		Personel p=new Personel();
 		p.setFirstname("Cemal");

@@ -8,8 +8,8 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 @SpringBootApplication
 @EnableConfigurationProperties(value=PersonelProperties.class)
 @ServletComponentScan
-public class PersonelApplication {
+public class StartSpringBootApplication {
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(PersonelApplication.class, args);
+		SpringApplication.run(StartSpringBootApplication.class, args);
 	}
 }
