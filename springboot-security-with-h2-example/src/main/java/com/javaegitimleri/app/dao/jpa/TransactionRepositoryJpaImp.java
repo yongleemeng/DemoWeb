@@ -57,7 +57,7 @@ public class TransactionRepositoryJpaImp implements TransactionRepository {
 		}
 		
 		//sb.append(CommonWebUtils.contructPagination(pageNo, CommonWebConstants.PAGINATION_LIST_SIZE));
-		sb.append(CommonWebUtils.contructPagination(pageNo, 10));
+		sb.append(CommonWebUtils.contructPagination(pageNo, CommonWebConstants.PAGINATION_LIST_SIZE));
 
 		if (!StringUtils.isEmpty(trx.getSortingList())) {
 			

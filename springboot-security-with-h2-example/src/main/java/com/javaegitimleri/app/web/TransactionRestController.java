@@ -56,25 +56,27 @@ public class TransactionRestController {
 	}
 	
 	//delete transaction
-	@RequestMapping(method=RequestMethod.DELETE,value="/transaction/{id}")
+	//@RequestMapping(method=RequestMethod.DELETE,value="/transaction/{id}")
+	//@ResponseBody
+	@RequestMapping(value="/transaction/delete/{id}")
 	@ResponseBody
-	public ResponseEntity<?> deleteTransaction(@PathVariable("id") String id){
+	public String deleteTransaction(@PathVariable("id") String id){
 		
 		try {
 			appService.delete(id);
 			
-			return ResponseEntity.ok().build();
+			return "Deleted " + id;
 			
 		} catch (CommonRollbackException e) {
 			logger.debug("CommonRollbackException",e);
 			if (CommonWebConstants.EXCEPTION_RECORD_NOT_FOUND.equals(e.getMessage())){
-				return ResponseEntity.notFound().build();
+				return "CommonRollbackException.EXCEPTION_RECORD_NOT_FOUND";
 			}
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+			return "CommonRollbackException";
 			
 		} catch (Exception e) {
 			logger.error("deleteTransaction",e);
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+			return "Exception";
 		}
 	} 
 	
